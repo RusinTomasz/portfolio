@@ -1,0 +1,34 @@
+# page libraries
+
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+      css/portfolio.css: {}
+      css/components/animate.css: {}
+global-scripts:
+  js:
+    js/portfolio-main-script.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once
+mobile-menu:
+  css:
+    theme:
+      css/components/mobileMenu.min.css: {}
+  js:
+    js/mobileMenu.min.js: {}
+responsive-background:
+  js:
+    js/responsiveBackgroundImage.js: {}
+masonry:
+  js:
+    js/multipleFilterMasonry.js: {}
+    js/masonry.min.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once

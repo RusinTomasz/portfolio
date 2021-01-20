@@ -1,0 +1,120 @@
+.webform {
+  background-color: $background-ligther;
+  padding: 15rem 0;
+  @include xl {
+    padding: 8rem 0;
+  }
+  @include sm {
+    padding: 4rem 0;
+  }
+  .webform-block-title {
+    margin-bottom: 3rem;
+    @include sm {
+      margin-bottom: 1rem;
+    }
+  }
+  .block-contact-info {
+    .contact-box {
+      background-color: white;
+      padding: 4rem 2rem 4rem 9rem;
+      margin: 2.45rem 0;
+      background-size: 3rem;
+      background-repeat: no-repeat;
+      background-position: 3rem 4rem;
+      @include rwdRange(1200, 1360) {
+        padding: 4rem 2rem 4rem 5rem;
+        background-position: 1rem 4rem;
+      }
+      @include sm {
+        padding: 4rem 2rem 4rem 7rem;
+        background-position: 2rem 4rem;
+      }
+      &.envelop {
+        background-image: url("../img/svg/envelop.svg");
+      }
+      &.note {
+        background-image: url("../img/svg/note.svg");
+      }
+      &.glob {
+        background-image: url("../img/svg/glob.svg");
+      }
+      .contact-box-title {
+        margin: 0;
+      }
+      .contact-box-link {
+        color: $gray;
+        @include rwdRange(1200, 1360) {
+          letter-spacing: 0;
+          font-size: 16px;
+        }
+        @include rwdRange(992, 1060) {
+          letter-spacing: 0;
+          font-size: 16px;
+        }
+        &:hover {
+          color: $yellow;
+        }
+      }
+    }
+  }
+  .form-wrapper {
+    .form-name-email {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .name-wrapper,
+      .email-wrapper {
+        width: 50%;
+        @include sm {
+          width: 100%;
+        }
+      }
+      .name-wrapper {
+        padding-right: 1.5rem;
+        @include sm {
+          padding: 0;
+        }
+      }
+      .email-wrapper {
+        padding-left: 1.5rem;
+        @include sm {
+          padding: 0;
+        }
+      }
+    }
+    label {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: $default;
+      font-weight: 500;
+      &::after {
+        background-image: url("../img/svg/star.svg");
+      }
+    }
+    input,
+    textarea {
+      max-width: 100%;
+      width: 100%;
+      padding: 1.5rem 2rem;
+      border: none;
+      outline: none;
+      &::placeholder {
+        color: $gray;
+      }
+    }
+    .submit-wrapper {
+      .webform-button--submit {
+        transition: all 0.4s;
+        border-radius: 30px;
+        background-color: white;
+        color: $default;
+        padding: 1rem 3rem;
+        border: 1px solid #e7e7e7;
+        font-weight: bold;
+        width: auto;
+        &:hover {
+          background-color: $yellow;
+        }
+      }
+    }
+  }
+}

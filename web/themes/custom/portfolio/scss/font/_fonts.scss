@@ -1,0 +1,137 @@
+@font-face {
+  font-family: "opensans";
+  src: url($site_theme_dir + "fonts/opensans/opensans-regular-webfont.eot");
+  src: url($site_theme_dir + "fonts/opensans/opensans-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url($site_theme_dir + "fonts/opensans/opensans-regular-webfont.woff2")
+      format("woff2"),
+    url($site_theme_dir + "fonts/opensans/opensans-regular-webfont.woff")
+      format("woff"),
+    url($site_theme_dir + "fonts/opensans/opensans-regular-webfont.ttf")
+      format("truetype"),
+    url($site_theme_dir + "fonts/opensans/opensans-regular-webfont.svg#opensansregular")
+      format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "opensans";
+  src: url($site_theme_dir + "fonts/opensans/opensans-bold-webfont.eot");
+  src: url($site_theme_dir + "fonts/opensans/opensans-bold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url($site_theme_dir + "fonts/opensans/opensans-bold-webfont.woff2")
+      format("woff2"),
+    url($site_theme_dir + "fonts/opensans/opensans-bold-webfont.woff")
+      format("woff"),
+    url($site_theme_dir + "fonts/opensans/opensans-bold-webfont.ttf")
+      format("truetype"),
+    url($site_theme_dir + "fonts/opensans/opensans-bold-webfont.svg#opensansbold")
+      format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "opensans";
+  src: url($site_theme_dir + "fonts/opensans/opensans-semibold-webfont.eot");
+  src: url($site_theme_dir + "fonts/opensans/opensans-semibold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url($site_theme_dir + "fonts/opensans/opensans-semibold-webfont.woff2")
+      format("woff2"),
+    url($site_theme_dir + "fonts/opensans/opensans-semibold-webfont.woff")
+      format("woff"),
+    url($site_theme_dir + "fonts/opensans/opensans-semibold-webfont.ttf")
+      format("truetype"),
+    url($site_theme_dir + "fonts/opensans/opensans-semibold-webfont.svg#opensanssemibold")
+      format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: fallback;
+}
+
+// @font-face {
+//   font-family: "poppins";
+//   src: url($site_theme_dir + "fonts/poppins/poppins-regular-webfont.eot");
+//   src: url($site_theme_dir + "fonts/poppins/poppins-regular-webfont.eot?#iefix")
+//       format("embedded-opentype"),
+//     url($site_theme_dir + "fonts/poppins/poppins-regular-webfont.woff2")
+//       format("woff2"),
+//     url($site_theme_dir + "fonts/poppins/poppins-regular-webfont.woff")
+//       format("woff"),
+//     url($site_theme_dir + "fonts/poppins/poppins-regular-webfont.ttf")
+//       format("truetype"),
+//     url($site_theme_dir + "fonts/poppins/poppins-regular-webfont.svg#poppinsrregular")
+//       format("svg");
+//   font-weight: 400;
+//   font-style: normal;
+//   font-display: fallback;
+// }
+
+@font-face {
+  font-family: "poppins";
+  src: url($site_theme_dir + "fonts/poppins/poppins-bold-webfont.eot");
+  src: url($site_theme_dir + "fonts/poppins/poppins-bold-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url($site_theme_dir + "fonts/poppins/poppins-bold-webfont.woff2")
+      format("woff2"),
+    url($site_theme_dir + "fonts/poppins/poppins-bold-webfont.woff")
+      format("woff"),
+    url($site_theme_dir + "fonts/poppins/poppins-bold-webfont.ttf")
+      format("truetype"),
+    url($site_theme_dir + "fonts/poppins/poppins-bold-webfont.svg#poppinsbold")
+      format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 18px;
+  line-height: 28px;
+  font-family: "opensans", sans-serif;
+  color: $gray;
+  @include md {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  @include sm {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $default;
+  font-weight: bold;
+  font-family: "poppins", sans-serif;
+}
+
+h1,
+h2 {
+  font-size: 64px;
+  line-height: 76px;
+  margin: 0 0 1rem;
+  @include md {
+    font-size: 52px;
+    line-height: 62px;
+  }
+  @include sm {
+    font-size: 42px;
+    line-height: 52px;
+  }
+}
+
+a {
+  font-family: "poppins", sans-serif;
+  letter-spacing: 0.5px;
+}

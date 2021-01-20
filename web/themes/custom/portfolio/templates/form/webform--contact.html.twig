@@ -1,0 +1,33 @@
+<div class="form-wrapper">
+	<div class="form-wrap clearfix">
+		<form{{attributes}}>
+			{{ title_prefix }}
+			<div class="row">
+				<div class="col-12 flex-wrapper form-name-email">
+					<div class="name-wrapper">
+						{{ element.elements.name }}
+					</div>
+					<div class="email-wrapper">
+						{{ element.elements.email }}
+					</div>
+				</div>
+				<div class="col-12">
+					{{ element.elements.subject }}
+				</div>
+				<div class="col-12">
+					<div class="message-wrapper">
+						{{ element.elements.message }}
+						{{ element.form_token }}
+						{{ element.form_build_id }}
+						{{ element.form_id }}
+					</div>
+					<div class="submit-wrapper">
+						{{ element.elements.consent_to_the_processing_of_personal_data }}
+						{{ element.elements.actions }}
+					</div>
+				</div>
+			</div>
+			{{ title_suffix }}
+		</form>
+	</div>
+</div>

@@ -1,0 +1,52 @@
+.main-menu {
+  display: none;
+}
+.mobile-nav {
+  display: block;
+  .nav-hamburger {
+    background-color: $yellow;
+  }
+  .menu-level--1 {
+    overflow: hidden;
+  }
+  &.active-with-social {
+    @include sm {
+      .social-wrapper {
+        display: flex;
+      }
+    }
+  }
+  .social-wrapper {
+    display: none;
+    position: relative;
+    width: 100%;
+    padding: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    top: 0;
+    margin-top: 2rem;
+    &::before,
+    &::after {
+      display: none;
+    }
+    .link-holder {
+      width: auto;
+      margin: 2rem;
+      &.fast-contact {
+        display: none;
+      }
+      &:nth-child(1) {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          top: -5px;
+          right: -2rem;
+          height: 100%;
+          width: 1px;
+          background-color: #efefef;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,304 @@
+* {
+  box-sizing: border-box;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-middle {
+  align-items: center;
+}
+.flex-center {
+  justify-content: center;
+}
+.flex-full {
+  width: 100%;
+}
+.flex-half {
+  width: 50%;
+}
+.flex-third {
+  width: 33%;
+}
+
+.background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  transition: all 0.4s;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.front-banner-holder,
+.field-banner-top-photo,
+.responsive-img-background {
+  picture {
+    img {
+      display: none;
+    }
+  }
+}
+
+.responsive-img-background {
+  background-size: cover;
+  background-position: center;
+}
+
+picture {
+  img {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+#main-content {
+  display: none;
+}
+
+.primary-button {
+  border-radius: 30px;
+  background-color: white;
+  color: $default;
+  padding: 1rem 3rem;
+  border: 1px solid #e7e7e7;
+  font-weight: bold;
+  cursor: pointer;
+  &:hover {
+    background-color: $yellow;
+  }
+}
+
+.yellow-subtitle {
+  color: $yellow;
+  margin: 0;
+  font-weight: bold;
+}
+
+.underline {
+  position: relative;
+  padding-bottom: 1rem;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 120px;
+    background-color: #dbdbde;
+  }
+  &::before {
+    background-color: $yellow;
+    width: 50px;
+    z-index: 1;
+    height: 5px;
+    bottom: -1px;
+  }
+}
+
+.column-content {
+  width: calc(100% - 380px);
+  @include xl {
+    width: calc(100% - 80px);
+  }
+  @include md {
+    width: calc(100% - 50px);
+  }
+  @include sm {
+    width: 100%;
+  }
+}
+
+.column-info {
+  width: 300px;
+  @include xl {
+    width: 0;
+    display: none;
+  }
+}
+
+.column-social {
+  width: 80px;
+  @include md {
+    width: 50px;
+  }
+  @include sm {
+    width: 0;
+    display: none;
+  }
+}
+
+.desktop-info {
+  position: absolute;
+  top: 50%;
+  left: -175px;
+  transform: translateY(-50%);
+  padding: 9rem 0;
+  @include rwd(1600) {
+    left: -270px;
+  }
+  @include xl {
+    display: none;
+  }
+  svg {
+    z-index: 1;
+    position: absolute;
+    width: 340px;
+    height: 450px;
+    top: -1px;
+    left: 15px;
+    #desktop-info-line {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: dash 1.5s linear forwards;
+      animation-delay: 1s;
+    }
+  }
+  h2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 370px;
+    height: 400px;
+    background-color: white;
+    padding: 5rem 6rem 5rem 3rem;
+    &::before,
+    &::after {
+      bottom: 115px;
+      left: 30px;
+    }
+    &::before {
+      bottom: 114px;
+    }
+  }
+}
+
+.social-wrapper {
+  position: fixed;
+  width: 80px;
+  top: 8rem;
+  right: 0;
+  padding-top: 200px;
+  @include md {
+    width: 50px;
+    top: 5rem;
+  }
+  @include sm {
+    display: none;
+  }
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 35px;
+    @include md {
+      top: 25px;
+    }
+  }
+  &:before {
+    height: 150px;
+    width: 3px;
+    background-color: #efefef;
+  }
+  &:after {
+    position: absolute;
+    height: 40px;
+    top: 90px;
+    width: 5px;
+    left: 50%;
+    background-color: $yellow;
+    @include md {
+      top: 80px;
+    }
+  }
+  .link-holder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+    a {
+      svg {
+        transition: all 0.4s;
+        width: 25px;
+        height: 25px;
+        fill: $gray;
+        @include md {
+          width: 20px;
+          height: 20px;
+        }
+        &#gh {
+          width: 35px;
+          height: 35px;
+          @include md {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+      &:hover {
+        svg {
+          fill: $yellow;
+        }
+      }
+    }
+    &.fast-contact {
+      padding-top: 85px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 60px;
+        width: 3px;
+        background-color: #efefef;
+      }
+      .contact-icon {
+        &:hover {
+          svg {
+            path {
+              fill: $yellow;
+            }
+          }
+        }
+        svg {
+          width: 25px;
+          height: 25px;
+          @include md {
+            width: 20px;
+            height: 20px;
+          }
+          path {
+            transition: all 0.4s;
+            fill: $gray;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

@@ -1,0 +1,148 @@
+#block-views-block-portfolio-block-1 {
+  .filters-wrapper {
+    margin: 4rem 2rem 3rem;
+    @include sm {
+      margin: 4rem 1rem 3rem;
+    }
+    @include rwd(420) {
+      margin: 4rem 0 3rem;
+    }
+    .primary-button {
+      display: inline-block;
+      transition: all 0.4s;
+      margin: 0.5rem 1rem 0.5rem 0;
+      font-family: "poppins", sans-serif;
+      letter-spacing: 0.5px;
+      &.b-active {
+        background-color: $yellow;
+      }
+      input {
+        display: none;
+      }
+    }
+  }
+}
+
+.node--type-portfolio {
+  &.node--view-mode-teaser {
+    max-width: calc(33% - 4rem);
+    background-color: white;
+    margin: 2rem;
+    box-shadow: 0 16px 32px rgba(180, 180, 180, 0.4);
+    @include md {
+      max-width: calc(50% - 4rem);
+    }
+    @include sm {
+      max-width: calc(50% - 2rem);
+      margin: 1rem;
+    }
+    @include rwd(420) {
+      max-width: 100%;
+      margin: 1rem 0;
+    }
+    &:hover {
+      .portfolio-item-title {
+        color: $yellow;
+      }
+    }
+    .portfolio-item-title {
+      margin: 0;
+      padding-bottom: 0;
+      padding-top: 1rem;
+      transition: all 0.2s;
+      margin-top: 2rem;
+      &::before {
+        bottom: auto;
+        top: 0;
+        background-color: $default;
+      }
+      &::after {
+        bottom: auto;
+        top: 1px;
+      }
+    }
+    p {
+      color: $gray;
+      margin: 0;
+    }
+    a {
+      padding: 2rem;
+    }
+  }
+  &.node--view-mode-full {
+    display: flex;
+    flex-wrap: wrap;
+    .main-section {
+      background-color: $background-darker;
+      padding: 10rem 0;
+      position: relative;
+      @include lg {
+        padding: 6rem 0;
+      }
+      @include sm {
+        padding: 5rem 0 3rem;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -300px;
+        background-color: $yellow;
+        width: 300px;
+        height: 100%;
+      }
+
+      .page-title-wrapper {
+        margin-bottom: 5rem;
+        @include sm {
+          margin-bottom: 2rem;
+        }
+      }
+      .project-intro {
+        padding-bottom: 2rem;
+        border-bottom: 2px solid #e4e4e4;
+        p {
+          margin-top: 0;
+        }
+      }
+      .project-informations {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+        h4 {
+          margin-top: 0;
+          font-size: 21px;
+          margin-bottom: 1rem;
+        }
+        ul {
+          list-style: none;
+        }
+        ul li::before {
+          content: "\2022";
+          color: $yellow;
+          font-weight: bold;
+          display: inline-block;
+          width: 1em;
+          margin-left: -1em;
+        }
+      }
+      .project-image {
+        img {
+          box-shadow: 0 16px 32px rgba(180, 180, 180, 0.4);
+        }
+      }
+      .links-wrapper {
+        padding-top: 3rem;
+        border-top: 2px solid #e4e4e4;
+        .primary-button {
+          margin-right: 2rem;
+        }
+      }
+      .project-body {
+        margin-top: 5rem;
+        @include sm {
+          margin-top: 4rem;
+        }
+      }
+    }
+  }
+}
