@@ -1,0 +1,43 @@
+#block-breadcrumbs {
+  text-align: right;
+  margin: 1rem 0;
+
+  .breadcrumb {
+    padding: 0 1.5rem;
+    ol {
+      display: inline-block;
+      padding: 0.5rem 2rem;
+      li:not(:last-child) {
+        &::after {
+          content: ">";
+        }
+      }
+      li {
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 400;
+
+        a {
+          font-family: "opensans", sans-serif;
+          color: $gray;
+          text-transform: uppercase;
+          font-size: 12px;
+          line-height: 14px;
+          &:hover {
+            color: $yellow;
+          }
+        }
+      }
+      li:last-child {
+        position: relative;
+        cursor: default;
+        color: lighten($color: $gray, $amount: 30%);
+        &::after,
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -96,7 +96,14 @@
 					<svg width="320" height="460" viewbox="0 0 320 460" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path id="desktop-info-line" d="M5 94.3016V5H315V455H176" stroke="black" stroke-width="10"/>
 					</svg>
-					<h2 class="underline">Portfolio detale</h2>
+					{% if breadcrumbs %}
+						<div class="breadcrumbs-wrapper">
+							{{ breadcrumbs }}
+						</div>
+					{% endif %}
+					<div class="desktop-info-content-wrapper underline">
+						<h2 class="">Portfolio detale</h2>
+					</div>
 				</div>
 				<div class="container">
 					<div class="row">
@@ -107,6 +114,11 @@
 							<h1 class="page-title underline">
 								{{ conLabel|striptags }}
 							</h1>
+							{% if breadcrumbs %}
+								<div class="breadcrumbs-mobile-wrapper">
+									{{ breadcrumbs }}
+								</div>
+							{% endif %}
 						</div>
 						<div class="col-12 col-lg-5 offset-lg-2">
 							{% if content.field_long_text[0] is not empty %}

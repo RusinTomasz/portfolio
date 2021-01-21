@@ -72,6 +72,52 @@
   &.node--view-mode-full {
     display: flex;
     flex-wrap: wrap;
+
+    .desktop-info {
+      .breadcrumbs-wrapper {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 230px;
+        z-index: 3;
+        padding: 0 6rem 0 3rem;
+      }
+      .desktop-info-content-wrapper {
+        width: 370px;
+        height: 400px;
+        background-color: white;
+        padding: 5rem 6rem 5rem 3rem;
+        &::before,
+        &::after {
+          bottom: 115px;
+          left: 30px;
+        }
+        &::before {
+          bottom: 114px;
+        }
+        h2 {
+          width: 100%;
+          height: auto;
+          background-color: transparent;
+          padding: 0;
+        }
+      }
+    }
+    .breadcrumbs-mobile-wrapper {
+      display: none;
+      @include xl {
+        display: block;
+      }
+      #block-breadcrumbs {
+        margin: 2rem 0 0;
+        .breadcrumb {
+          padding: 0;
+          ol {
+            background-color: $background-ligther;
+          }
+        }
+      }
+    }
     .main-section {
       background-color: $background-darker;
       padding: 10rem 0;

@@ -113,6 +113,8 @@ function portfolio_preprocess_page(&$variables) {
  * Implements hook_preprocess_HOOK() for node.html.twig.
  */
 function portfolio_preprocess_node(&$variables) {
+
+
   $variables['main_address'] = theme_get_setting('main_address')?theme_get_setting('main_address'):FALSE;
   $display_theme  = 'default';
   //$variables['view_mode'] == 'full' &&
@@ -147,7 +149,13 @@ function portfolio_preprocess_node(&$variables) {
 
 }
 
-
+function portfolio_preprocess_node__portfolio(&$variables) {
+  $block = \Drupal\block\Entity\Block::load('breadcrumbs');
+  $block_content = \Drupal::entityTypeManager()
+    ->getViewBuilder('block')
+    ->view($block);
+  $variables['breadcrumbs'] = $block_content;
+}
 
 
 /**
