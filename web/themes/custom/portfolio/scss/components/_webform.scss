@@ -42,6 +42,7 @@
         margin: 0;
       }
       .contact-box-link {
+        font-family: "opensans", sans-serif;
         color: $gray;
         @include rwdRange(1200, 1360) {
           letter-spacing: 0;
