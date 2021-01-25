@@ -80,6 +80,10 @@
 	<nav class="main-menu" role="navigation">
 		{{ main_menu }}
 	</nav>
+	<div class="language-switcher">
+		<span class="language-label-text">{{ "Choose Language"|trans }}</span>
+		{{ drupal_block('language_block:language_interface', wrapper=false) }}
+	</div>
 	{{ page.breadcrumb }}
 	<main role="main">
 		<a id="main-content" tabindex="-1"></a>

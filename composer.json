@@ -34,6 +34,7 @@
         "drupal/pathauto": "^1.6",
         "drupal/svg_image": "^1.13",
         "drupal/token": "^1.6",
+        "drupal/twig_tweak": "^2.9",
         "drupal/webform": "^5.9",
         "drupal/weight": "^3.1"
     },

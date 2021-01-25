@@ -49,4 +49,48 @@
       }
     }
   }
+  .language-switcher {
+    margin-top: 1rem;
+    display: block;
+    .current-language {
+      display: none;
+    }
+    .language-label-text {
+      padding: 1rem 0 1rem 1.5rem;
+      text-transform: none;
+      display: block;
+      position: relative;
+      color: $default;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 300;
+      width: 100%;
+      transition: all 0.4s;
+    }
+    .language-switcher-language-url {
+      width: 100%;
+      display: flex !important;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+      }
+      .language-link {
+        font-family: "opensans", sans-serif;
+        display: block;
+        color: $default;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 300;
+        padding: 0 0 1rem 1.5rem;
+        text-transform: uppercase;
+      }
+      .is-active {
+        color: $yellow;
+      }
+    }
+  }
 }

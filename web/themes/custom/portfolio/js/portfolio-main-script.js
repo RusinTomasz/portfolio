@@ -5,7 +5,11 @@
         .find("body")
         .once("myCustomMainBehavior")
         .each(function () {
-          const menuMobile = new MobileMenu(".main-menu");
+          const menuMobile = new MobileMenu(
+            ".main-menu",
+            false,
+            ".language-switcher"
+          );
           let imageWrapper = document.querySelectorAll(
             ".responsive-img-background"
           );

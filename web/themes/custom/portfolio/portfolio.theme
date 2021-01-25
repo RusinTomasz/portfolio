@@ -157,6 +157,17 @@ function portfolio_preprocess_node__portfolio(&$variables) {
   $variables['breadcrumbs'] = $block_content;
 }
 
+/**
+ * Use language code for the language switcher
+ *
+ * @param $variables
+ */
+function portfolio_preprocess_links__language_block(&$variables) {
+  foreach ($variables['links'] as $i => $link) {
+    $linkLanguage = $link['link']['#options']['language'];
+    $variables['links'][$i]['link']['#title'] = $linkLanguage->get('id');
+  }
+}
 
 /**
  * Implements hook_preprocess_HOOK() for HTML document templates.

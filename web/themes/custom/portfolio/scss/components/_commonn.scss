@@ -297,6 +297,10 @@ picture {
   }
 }
 
+.language-switcher {
+  display: none;
+}
+
 @keyframes dash {
   to {
     stroke-dashoffset: 0;
