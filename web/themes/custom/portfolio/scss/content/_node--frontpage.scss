@@ -163,6 +163,16 @@
                       background-image: url("../img/svg/note.svg");
                     }
                   }
+                  &.clock-icon {
+                    &::before {
+                      background-image: url("../img/svg/clock.svg");
+                    }
+                  }
+                  &.goal-icon {
+                    &::before {
+                      background-image: url("../img/svg/glob.svg");
+                    }
+                  }
                 }
                 .box-title {
                 }
