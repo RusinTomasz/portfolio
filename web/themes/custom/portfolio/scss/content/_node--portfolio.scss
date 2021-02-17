@@ -173,6 +173,12 @@
         }
       }
       .project-image {
+        @include lg {
+          margin-top: 5rem;
+        }
+        @include sm {
+          margin-top: 4rem;
+        }
         img {
           box-shadow: 0 16px 32px rgba(180, 180, 180, 0.4);
         }
