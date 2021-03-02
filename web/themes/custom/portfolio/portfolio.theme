@@ -113,7 +113,7 @@ function portfolio_preprocess_page(&$variables) {
  * Implements hook_preprocess_HOOK() for node.html.twig.
  */
 function portfolio_preprocess_node(&$variables) {
-
+  $variables['lang_code'] = \Drupal::languageManager()->getCurrentLanguage()->getId();
 
   $variables['main_address'] = theme_get_setting('main_address')?theme_get_setting('main_address'):FALSE;
   $display_theme  = 'default';
