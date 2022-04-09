@@ -83,8 +83,7 @@ parameters:
     # render array, hence varying every render array by these cache contexts.
     #
     # @default ['languages:language_interface', 'theme', 'user.permissions']
-    required_cache_contexts:
-      ["languages:language_interface", "theme", "user.permissions"]
+    required_cache_contexts: ['languages:language_interface', 'theme', 'user.permissions']
     # Renderer automatic placeholdering conditions:
     #
     # Drupal allows portions of the page to be automatically deferred when
@@ -109,7 +108,7 @@ parameters:
       # Disable by setting to [].
       #
       # @default ['session', 'user']
-      contexts: ["session", "user"]
+      contexts: ['session', 'user']
       # Tags with a high invalidation frequency.
       #
       # Disable by setting to [].
@@ -155,21 +154,21 @@ parameters:
     - webcal
     - rtsp
 
-    # Configure Cross-Site HTTP requests (CORS).
-    # Read https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
-    # for more information about the topic in general.
-    # Note: By default the configuration is disabled.
+   # Configure Cross-Site HTTP requests (CORS).
+   # Read https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
+   # for more information about the topic in general.
+   # Note: By default the configuration is disabled.
   cors.config:
     enabled: true
     # Specify allowed headers, like 'x-allowed-header'.
-    allowedHeaders: ["*"]
+    allowedHeaders: ['x-csrf-token','authorization','content-type','accept','origin','x-requested-with', 'access-control-allow-origin','x-allowed-header','*']
     # Specify allowed request methods, specify ['*'] to allow all possible ones.
-    allowedMethods: ["*"]
+    allowedMethods: ['*']
     # Configure requests allowed from specific origins.
-    allowedOrigins: ["*"]
+    allowedOrigins: ['http://localhost/','http://localhost:3000','http://localhost:3001','http://localhost:3002','*']
     # Sets the Access-Control-Expose-Headers header.
-    exposedHeaders: false
+    exposedHeaders: true
     # Sets the Access-Control-Max-Age header.
     maxAge: false
     # Sets the Access-Control-Allow-Credentials header.
-    supportsCredentials: false
+    supportsCredentials: true

@@ -36,7 +36,8 @@
         "drupal/token": "^1.6",
         "drupal/twig_tweak": "^2.9",
         "drupal/webform": "^5.9",
-        "drupal/weight": "^3.1"
+        "drupal/weight": "^3.1",
+        "drush/drush": "8.4.10"
     },
     "conflict": {
         "drupal/drupal": "*"
