@@ -90,6 +90,7 @@
 	{% if view_mode == 'full' %}
 		<div class="column-info"></div>
 		<div class="column-content">
+
 			<header class="page-header">
 				<div class="desktop-info">
 					<svg width="320" height="460" viewbox="0 0 320 460" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -110,6 +111,7 @@
 					</div>
 				</div>
 			</header>
+
 			<section class="about">
 				<div class="container">
 					<div class="row">
@@ -119,13 +121,13 @@
 							<p>{{ "It is said, 'Choose a Job You Love, and You Will Never Have To Work a Day in Your Life'. Programming is my passion and hobby."|trans }}</p>
 							<p>{{ "In my projects, I use technologies such as JavaScript, React, Node.js, Drupal 8, HTML5, CSS / SASS. I put 100% commitment in every project."|trans }}</p>
 							<p>{{ "Currently, I would like to develop as an React Developer. I am open to learning about new technologies."|trans }}</p>
-						</p>
 						{% if lang_code == "pl" %}
 							<a href="/Rusin-Tomasz-Pl.pdf" class="primary-button" target="_blank">{{ "Download CV"|trans }}</a>
 						{% else %}
 							<a href="/Rusin-Tomasz-En.pdf" class="primary-button" target="_blank">{{ "Download CV"|trans }}</a>
 						{% endif %}
 					</div>
+
 					<div class="col-12 col-lg-6 about-boxes">
 						<div class="box-wrapper">
 							<div class="column-first">
@@ -161,6 +163,7 @@
 				</div>
 			</div>
 		</section>
+
 		<section class="job-history">
 			<div class="container">
 				<div class="row">
@@ -193,7 +196,6 @@
                 </div>
               </div>
             </div>
-          </div>
 				</div>
 			</div>
 		</section>
