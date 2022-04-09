@@ -234,6 +234,9 @@
       }
       .job-second {
         margin-top: 5rem;
+        @include sm {
+          margin-top: 2rem;
+        }
       }
       .portfolio {
         padding: 15rem 0;
